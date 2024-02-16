@@ -46,6 +46,8 @@ public class ObjectInteraction : MonoBehaviour
     {
         Debug.Log("Arma quitada: " + gameObject.name);
         transform.SetParent(null);
+        transform.localPosition = Vector3.zero; // Resetear la posición
+        transform.localRotation = Quaternion.identity; // Resetear la rotación
         gameObject.SetActive(false);
         isEquipped = false;
     }
